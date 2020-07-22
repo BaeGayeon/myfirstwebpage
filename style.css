@@ -1,0 +1,41 @@
+body{
+  background-color:#FAD291;
+}
+#back{
+  border : 2px black solid;
+  font-family:"Monospace", Courier;
+  background-color: white;
+}
+h1 {
+  text-align:center;
+  border-bottom: 2px black solid;
+  background-color:#E2F0A7;
+  margin:0;
+  padding-bottom:20px;
+  padding-top:20px;
+  font-family:"Monospace", Courier;
+}
+ul{
+  border:black dotted 2px;
+  margin:15px;
+  padding:20px;
+  padding-left:35px;
+}
+#grid{
+  display:grid;
+  grid-template-columns:200px 1fr;
+}
+h3 {
+  text-align:center;
+}
+#article{
+  margin-left:20px;
+  margin-right:10px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+a:hover{
+  text-decoration:underline;
+}
