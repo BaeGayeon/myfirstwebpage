@@ -26,7 +26,27 @@
       </p>
       </div>
     </div>
-    <p style="text-align:center"> 2020/07/22 Bae Gayeon </p>
+    <p style="text-align:center; margin-bottom:0"> 2020/07/22 Bae Gayeon </p>
+    <center>
+      <input id="night_day" type="button" value="night" onclick="
+      var jsbody = document.querySelector('body')
+      var jsback = document.querySelector('#back')
+      var jsh1 = document.querySelector('h1')
+      if(this.value=='night'){
+        jsback.style.backgroundColor='gray';
+        jsh1.style.backgroundColor='darkgray';
+        jsbody.style.backgroundColor='black';
+        jsbody.style.color='white';
+        this.value='day';
+      }
+      else{
+        jsback.style.backgroundColor='white';
+        jsh1.style.backgroundColor='#E2F0A7';
+        jsbody.style.backgroundColor='#FAD291';
+        jsbody.style.color='black';
+        this.value='night';
+      }">
+    </center>
   </div>
   </body>
 </html>
