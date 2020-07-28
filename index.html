@@ -5,43 +5,57 @@
     <title>배가연</title>
     <link rel="stylesheet" href="style.css">
     <script>
+        function LinkSetColor(color){
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i<alist.length){
+            alist[i].style.color=color;
+            i = i + 1;
+            }
+          }
+
+        function BodySetColor(color){
+          document.querySelector('body').style.color=color;
+        }
+
+        function BodySetBackgroundColor(color){
+          document.querySelector('body').style.backgroundColor=color;
+        }
+
+        function h1SetBackgroundColor(color){
+          document.querySelector('h1').style.backgroundColor=color;
+        }
+
+        function BackSetBackgroundColor(color){
+          document.querySelector('#back').style.backgroundColor=color;
+        }
+
+        function ButtonSetBackgroundColor(color){
+          document.querySelector('.button').style.backgroundColor=color;
+        }
       function nightdayHandler(self){
-        var jsbody = document.querySelector('body')
-        var jsback = document.querySelector('#back')
-        var jsh1 = document.querySelector('h1')
-        var jsbutton = document.querySelector('.button')
 
         if(self.value=='night'){
-          jsback.style.backgroundColor='gray';
-          jsh1.style.backgroundColor='darkgray';
-          jsbody.style.backgroundColor='black';
-          jsbody.style.color='white';
+          BackSetBackgroundColor('gray')
+          h1SetBackgroundColor('darkgray')
+          BodySetBackgroundColor('black');
+          BodySetColor('white');
+          LinkSetColor('white');
+          ButtonSetBackgroundColor('#E2F0A7');
           self.value='day';
-          jsbutton.style.backgroundColor='#E2F0A7';
-
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i<alist.length){
-            alist[i].style.color='white';
-            i = i + 1;
-            }}
+        }
 
         else{
-          jsback.style.backgroundColor='white';
-          jsh1.style.backgroundColor='#E2F0A7';
-          jsbody.style.backgroundColor='#FAD291';
-          jsbody.style.color='black';
+          BackSetBackgroundColor('white')
+          h1SetBackgroundColor('#E2F0A7')
+          BodySetBackgroundColor('#FAD291');
+          BodySetColor('black');
+          LinkSetColor('black');
+          ButtonSetBackgroundColor('lightgray')
           self.value='night';
-          jsbutton.style.backgroundColor='lightgray';
-
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i<alist.length){
-            alist[i].style.color='black';
-            i = i + 1;
         }
       }
-      }
+
     </script>
   </head>
   <body>
